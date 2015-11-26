@@ -1,0 +1,277 @@
+doctype html
+html.no-js(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Sical Mollare AB
+    link(rel='apple-touch-icon', href='apple-touch-icon.png')
+    // Place favicon.ico in the root directory
+    // build:css styles/vendor.css
+    // bower:css
+    // endbower
+    // endbuild
+    // build:css styles/main.css
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+    // build:js scripts/vendor/modernizr.js
+    script(src='/bower_components/modernizr/modernizr.js')
+    // endbuild
+  body
+    //if lt IE 10
+      p.browserupgrade
+        | You are using an
+        strong outdated
+        |  browser. Please
+        a(href='http://browsehappy.com/') upgrade your browser
+        |  to improve your experience.
+    nav.navbar.navbar-default.navbar-static-top.navbar-inverse
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='http://www.sical.se/' id='top') Sical AB Mollare
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav.navbar-left
+            li
+              a(href='http://www.sical-ab.com/#!contact/ccyf') CONTACTS
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='#') Home
+            li
+              a(href='#') Portfolio
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Services
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='#') Inside house
+                li
+                  a(href='#') Outside house
+                li.divider(role='separator')
+                li
+                  a(href='#') Institutes & Commune
+      // /.navbar-collapse
+    // /.container-fluid
+  .main-content
+    .main-header
+      .container
+      .container-head
+          h2.hidden-xs Sical AB is the best painting company in Stockholm
+            h4.hidden-xs
+              br
+              | The company is small and flexible with high respect
+              br
+              | to keep a high service standard to all customers.
+          p.lead  Sical AB was established in 1985
+          p.hidden-xs The company is specialized in designing and developing Heat-exchangers for special applications. The Heat-exchangers are produced by well qualified producers of stainless steel. All Heat-exchangers are built from thermo-plates which is the key for the functioning.
+      a.btn.btn-lg.btn-default(href='#')
+        img.img-responsive.brush-small(src='images/art3.svg', alt='brush', style='height: 40px')
+        | To paint!
+    nav.navbar.navbar-default.navbar-inverse
+      .container
+        ul.nav.navbar-nav.navbar-left
+          li
+            a(href='http://www.sical-ab.com/#!contact/ccyf') Stockholm
+          li.hidden-xs
+            a(href='http://www.sical-ab.com/#!contact/ccyf') Oslo
+          li.hidden-xs
+            a(href='http://www.sical-ab.com/#!contact/ccyf') Kyiv
+    .container
+      .row.marketing
+        .col-sm-4
+          img(src='images/paint_bucket.png', alt='Generic placeholder image', width='140', height='140')
+          h3 Best materials
+          p
+            | We use best materials possible to buy to guarantee outstanding quality! Donec sed odio dui.
+          p
+            a.btn.btn-default(href='#', role='button') View details »
+        // /.col-lg-4
+        .col-sm-4
+          img(src='images/Tools.png', alt='Responsive image', height='140')
+          h3 Modern Tools
+          p
+            | make us fastest painters ever!
+            br
+            | makes us professionals
+            br
+            | Modern tools is error-free guarantee
+          p
+            a.btn.btn-default(href='#', role='button') tools »
+        .col-sm-4
+          img(src='images/design.png', alt='Responsive image', height='140')
+          h3 Best practices
+          p
+            | Advance methodologies
+            br
+            | We are the most efficient painters ever!
+            br
+            | Clean technologies is your comfort
+          p
+            a.btn.btn-default(href='#', role='button') View details »
+        // /.col-lg-4
+      hr.featurette-divider
+      .row
+        .col-sm-7
+          img.img-responsive.img-rounded(src='images/albanova.jpg' alt='Responsive image')
+        .col-sm-5
+          h2 We work for communes and institutes
+          p.lead Government approved
+      p.pull-left(style='color: #999') AlbaNova University Centre, 2015
+      hr.featurette-divider
+      .row
+        .col-sm-5
+          h3.pull-right We work for private househoods
+          p.lead.pull-right
+            | The best painters ever!
+            br
+            |The best painters ever!
+            br
+            | Indeed
+        .col-sm-7
+          img.img-responsive.img-rounded(src='images/paint_wall.jpg' alt='Responsive image')
+      p.pull-right(style='color: #999') Another capture, 2015
+      hr.featurette-divider
+
+      // /PORTFOLIO
+    .container
+      h3 Portfolio
+      .row
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src='images/paint_wall.jpg', alt='...')
+            .caption
+              h3 Thumbnail label
+              p
+                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+              p
+                a.btn.btn-primary(href='#', role='button') details
+                a.btn.btn-default(href='#', role='button') client feedback
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src='images/paint_wall.jpg', alt='...')
+            .caption
+              h3 Thumbnail label
+              p
+                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+              p
+                a.btn.btn-primary(href='#', role='button') details
+                a.btn.btn-default(href='#', role='button') client feedback
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src='images/paint_wall.jpg', alt='...')
+            .caption
+              h3 Thumbnail label
+              p
+                | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+              p
+                a.btn.btn-primary(href='#', role='button') details
+                a.btn.btn-default(href='#', role='button') client feedback
+
+      hr.featurette-divider
+      // / PORTFOLIO ends
+
+      h3.center Contacts
+
+      .row.contacts
+        .col-sm-6.director.hidden-sm
+          img.img-circle(src='images/Owner.jpg', alt='...' style='height:150px;')
+          h4
+            | Göran Larsson
+          p Director
+
+        .col-sm-6
+          ul.list-group
+            .list-group-item
+              span.glyphicon.glyphicon-envelope(aria-hidden="true")
+              a(href='mailto:andre.lifter@gmail.com').col-md-10 andre.lifter@gmail.com
+            .list-group-item
+              span.glyphicon.glyphicon-earphone(aria-hidden="true")
+              a(href='').col-md-10 +46-73-399-83-40
+            .list-group-item
+              img.glyphicon(style='height: 22px; fill: #777', src='images/skype.svg')
+              a(href='').col-md-10 vasil_posmit
+            .list-group-item
+              span.glyphicon.glyphicon-map-marker(aria-hidden="true")
+              a(href='https://www.google.com/maps/search/H%C3%B6glandstorget+11,+SE-167+71+Bromma/@59.3234185,17.9356108,15.75z').col-sm-10 Höglandstorget 11, SE-167 71 Bromma,
+                br
+                |  Stockholm, Sweden
+
+
+      hr.featurette-divider
+      .row
+        form.col-md-6
+          h4 Contact form
+          .form-group
+            label(for='exampleInputEmail1') Email address
+            .input-group
+              span#basic-addon1.input-group-addon @
+              input#exampleInputEmail1.form-control(type='email', placeholder='example@gmail.com')
+          .form-group
+            label(for='exampleInputPassword1') Name
+            .input-group
+              span#basic-addon1.input-group-addon
+                span.glyphicon.glyphicon-user(aria-hidden="true")
+              input#exampleInputName.form-control(type='text', placeholder='Mats Larsson')
+          .form-group
+            label(for='exampleInputMessage') Message
+            textarea.form-control(rows='3', placeholder="You are wellome to ask any questions!", required='')
+          button.btn.btn-success.btn-block(type='submit') Send
+        .col-lg-6.col-md-6
+          h4 Main office
+          script(src='/bower_components/jquery/dist/jquery.js')
+          script.
+            $(function(){
+            $("#includedContent").load("map.html");
+            });
+          #includedContent
+      // / GOOGLE MAP API
+      // /GOOGLE MAP API ends
+
+    .container
+      .footer
+        p.pull-right
+          a(href='#top') Back to top
+        p
+          | © 2015 Data Studio, VP Inc. ·
+          a(href='#') Privacy
+          |  ·
+          a(href='#') Terms
+
+    // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    //- script.
+    //-   (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    //-   function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    //-   e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    //-   e.src='https://www.google-analytics.com/analytics.js';
+    //-   r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    //-   ga('create','UA-XXXXX-X');ga('send','pageview');
+    // build:js scripts/vendor.js
+    // bower:js
+
+
+    // endbower
+    // endbuild
+    // build:js scripts/plugins.js
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
+    // endbuild
+    // build:js scripts/main.js
+    script(src='scripts/main.js')
+    // endbuild

@@ -1,0 +1,148 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+/*
+PROJECT STYLES
+//////////////*/
+@import "yeoman.scss";
+
+$light: rgba(250,250,250, .4);
+/*
+PAINT PROJECT
+//////////////*/
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.brush {
+  max-width: 100px;
+  top: 0;
+  position: relative;
+  float: left;
+}
+
+.brush-small {
+  @extend .brush;
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+
+.main-header {
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-height: 200px;
+  height: 30%;
+  max-height: 600px;
+  max-width: 100%;
+
+  background-image: url('../images/Paint_bottle.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-color: #eee;
+
+  text-align: center;
+  .container {
+    // background: #777;
+  }
+  h1, h2, h3, p {
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container-head {
+    background: $light;
+    border: solid 1px black;
+    margin-top: 15vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .btn {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    min-width: 250px;
+    padding-top: 15px;
+  }
+  .btn-default{
+    color: black;
+    font-weight: 600;
+    vertical-align: center;
+    font-size: 26px;
+    background: $light;
+    &:hover {
+      border: solid 1px black;
+      background: #fff;
+      transition: background 2s;
+    }
+  }
+}
+
+.container {
+  p {
+    &.pull-right,
+    &.pull-left {
+      margin-bottom: 0;
+    }
+    }
+  hr{
+    margin-top: 25px;
+  }
+}
+.marketing {
+  text-align: center;
+}
+
+.center{
+  text-align: center;
+}
+
+.contacts {
+  .glyphicon {
+    font-size: 1.4em;
+  }
+  .director{
+    img {
+      padding-bottom: 10px;
+    }
+    img, h4, p{
+      display: block;
+      margin: auto;
+      text-align: center;
+    }
+  }
+  .list-group-item{
+    min-height: 42px;
+    height: inherit;
+    .glyphicon, p {
+      @extend .pull-left;
+    }
+    a {
+      @extend p;
+      position: absolute;
+      left: 50px;
+      color: #777;
+    }
+    &:last-of-type{
+      min-height: 60px;
+      @media (max-width: 390px){
+        min-height: 80px;
+      }
+    }
+  }
+}
+.map {
+  width:100%;
+  height: 100%;
+}
+#includedContent{
+  min-height: 200px;
+}
