@@ -21,7 +21,7 @@ gulp.task('jade', () => {
 ////////////////////// JADE ends
 
 gulp.task('styles', () => {
-  return gulp.src('app/styles/*.scss')
+  return gulp.src(['app/styles/main.scss','app/font-awesome/scss/font-awesome.scss'])
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
@@ -56,7 +56,7 @@ gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 gulp.task('html', ['jade','styles'], () => {
   const assets = $.useref.assets({searchPath: ['.tmp', 'app', '.']});
 
-  return gulp.src(['app/*.html', '.tmp/*.html'])
+  return gulp.src(['app/*.html','.tmp/*.html'])
     .pipe(assets)
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.minifyCss({compatibility: '*'})))
@@ -162,7 +162,7 @@ gulp.task('wiredep', () => {
     }))
     .pipe(gulp.dest('app/styles'));
 
-  gulp.src('app/layouts/*.jade')
+  gulp.src('app/**/*.jade')
     .pipe(wiredep({
       exclude: ['bootstrap-sass'],
       ignorePath: /^(\.\.\/)*\.\./
@@ -170,7 +170,18 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'jade', 'html', 'images', 'fonts', 'extras'], () => {
+// JS CONCAT
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+
+gulp.task('scripts', function() {
+  return gulp.src(['app/**/*.js', 'bower_components/jquery/dist/jquery.js'])
+    .pipe(concat('all.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/scripts/'));
+});
+
+gulp.task('build', ['lint', 'images', 'fonts', 'extras', 'html', 'scripts'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
