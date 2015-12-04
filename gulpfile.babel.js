@@ -28,8 +28,9 @@ gulp.task('styles', () => {
       outputStyle: 'expanded',
       precision: 10,
       includePaths: ['.']
-    }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({browsers: ['last 1 version']}))
+    })
+    .on('error', $.sass.logError))
+    .pipe($.autoprefixer({browsers: ['> 1%']}))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({stream: true}));
@@ -137,6 +138,14 @@ gulp.task('serve:dist', () => {
   });
 });
 
+gulp.task('serveprod', function() {
+  connect.server({
+    root: 'dist',
+    port: process.env.PORT || 5000, // localhost:5000
+    livereload: false
+  });
+});
+
 gulp.task('serve:test', () => {
   browserSync({
     notify: false,
@@ -176,8 +185,10 @@ var concat = require('gulp-concat');
 
 gulp.task('scripts', function() {
   return gulp.src(['app/**/*.js', 'bower_components/jquery/dist/jquery.js'])
+    .pipe($.sourcemaps.init())
     .pipe(concat('all.js'))
     .pipe(uglify())
+    .pipe($.sourcemaps.write())
     .pipe(gulp.dest('dist/scripts/'));
 });
 
